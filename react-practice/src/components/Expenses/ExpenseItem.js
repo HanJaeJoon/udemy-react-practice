@@ -10,6 +10,10 @@ const ExpenseItem = (props) => {
     setTitle('TSLA');
   };
 
+  if (!props.display) {
+    return null;
+  }
+
   return (
     <Card className="expense-item">
       <ExpenseDate date={props.date} />
