@@ -1,12 +1,11 @@
-import { useContext, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 
-import CartContext from '../../../store/cart-context';
 import Input from '../../UI/Input';
 import classes from './MealItemForm.module.css';
 
 const MealItemForm = (props) => {
   // const cartContext = useContext(CartContext);
-  const [amountIsValid, setAmountIsValid] = useState(true);
+  const [amountIsValid] = useState(true);
   const amountInputRef = useRef();
 
   const submitHandler = (event) => {
@@ -44,5 +43,5 @@ const MealItemForm = (props) => {
     </form>
   );
 };
-
+ 
 export default MealItemForm;
